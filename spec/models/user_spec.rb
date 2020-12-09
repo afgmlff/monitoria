@@ -18,8 +18,9 @@ RSpec.describe User, type: :model do
 
 
   describe "information must exist" do
-    before (:each) do
-      @user = build(:user)
+
+  	before (:each) do
+      @user = create(:user)
     end
 
     it "is invalid without a name" do
@@ -29,13 +30,13 @@ RSpec.describe User, type: :model do
     end
 
     it "is invalid without an email address" do
-      @user.email = nil
-      @user.valid?
-      expect(@user.errors[:email]).to include("can't be blank")
+      expect(
+        User.new(name: "nome")
+      ).to_not be_valid
     end
 
     it "is invalid without a password" do
-      @user.password = nil
+      @user.password = ""
       @user.valid?
       expect(@user.errors[:password]).to include("can't be blank")
     end
@@ -46,7 +47,7 @@ RSpec.describe User, type: :model do
       @user1 = create(:user, email: 'email@email.com')
     end
     it "is invalid with a duplicate email address" do
-      user2 = build(:user, email: 'duplicate@example.com')
+      user2 = build(:user, email: 'email@email.com')
       user2.valid?
       expect(user2.errors[:email]).to include("has already been taken")
     end
