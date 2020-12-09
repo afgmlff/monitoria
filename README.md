@@ -19,30 +19,20 @@ O NOMEDOAPP é uma aplicação web onde os monitores podem se cadastrar e acessa
 ## Linguagem
 
 ### Front end
-  a) HTML
-  
-  b) CSS
-  
-  c) Javascript
+  a) Embedded Ruby
   
   
 ### Back end
-  a) Node.js
+  a) Ruby on Rails
   
-  b) MySQL
+  b) Postgres
   
-  
-## Padrão de codificação
-  Não definido
-  
-## Verificador para o padrão de codificação
-  Não definido
   
 ## Framework de testes
-  Não definido
+  Rspec
   
 ## Bibliotecas e Frameworks de teste
-  Não definido
+  Rspec
   
 ## Verificador de Código
   Não definido
