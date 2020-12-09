@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Simplecov coverage gem
+gem 'simplecov', require: false, group: :test
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -30,6 +32,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
+
+gem 'omniauth-facebook'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
