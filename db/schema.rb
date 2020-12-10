@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_12_10_175625) do
     t.string "subject"
     t.date "start_date"
     t.date "end_date"
+    t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_activities_on_user_id"

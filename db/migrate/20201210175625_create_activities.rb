@@ -5,6 +5,7 @@ class CreateActivities < ActiveRecord::Migration[6.0]
       t.string :subject
       t.date :start_date
       t.date :end_date
+      t.string :status
 
       t.timestamps
     end

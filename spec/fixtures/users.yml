@@ -1,0 +1,11 @@
+admin:
+    id: 0
+    name: 'AdministradorTeste'
+    role: 'administrator'
+    email: 'admin@admin.com'
+
+tutor:
+    id: 1
+    name: 'MonitorTeste'
+    role: 'tutor'
+    email: 'tutor@tutor.com'
