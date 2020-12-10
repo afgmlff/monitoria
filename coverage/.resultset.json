@@ -669,7 +669,7 @@
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/models/activity.rb": {
         "lines": [
           1,
-          null,
+          1,
           null
         ]
       },
@@ -728,6 +728,6 @@
         ]
       }
     },
-    "timestamp": 1607635555
+    "timestamp": 1607635629
   }
 }
