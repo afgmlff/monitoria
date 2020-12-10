@@ -1,0 +1,13 @@
+<ul class="nav_ul">
+  <li class="nav_li"><%= link_to "Home", root_path, class: 'nav_text' %><li>
+  <% if user_signed_in? %>
+    <li style="float:right" class="nav_li"><%= link_to "<img src='https://cdn0.iconfinder.com/data/icons/housing-interface-1/16/Power-512.png' style='width:15px;heigth:15px;'>".html_safe, destroy_user_session_path, method: :delete, class: 'nav_text' %><li>
+    <li style="float:right" class="nav_li"><span class="nav_text">Bem vindo <%=current_user.name if current_user%></span><li>
+  <% else %>
+    <li style="float:right" class="nav_li"><%= link_to "Cadastrar", new_user_registration_path, class: 'nav_text' %><li>
+    <li style="float:right" class="nav_li"><%= link_to "Logar", new_user_session_path, class: 'nav_text' %><li>
+  <% end %>
+</ul>
+<!-- 
+  <i class='fa fa-pencil fa-lg'></i>
+-->
