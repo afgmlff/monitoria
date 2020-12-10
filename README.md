@@ -29,7 +29,7 @@ macOS | http://installrails.com/steps/choose_os_version
 ### Banco de Dados
 É necessário instalar o Postgres, sistema gerenciador de banco de dados utilizado no projeto. Em ambiente Linux, sua presença pode ser verificada com o comando:
     
-    $ postgres -V
+    $ psql -V
 
 ### App Monitoria
 Verificada a instalação do Rails, basta clonar este repositório em um diretório local e executar os seguintes comandos (dentro do diretório clonado):
