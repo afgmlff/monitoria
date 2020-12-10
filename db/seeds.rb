@@ -11,3 +11,5 @@ User.destroy_all
 User.create(name: "Administrador", email: "admin@admin.com", password: "admin123", role: "administrator")
 User.create(name: "Monitor", email: "tutor@tutor.com", password: "admin123", role: "tutor")
 User.create(name: "Aluno", email: "aluno@aluno.com", password: "admin123", role: "aluno")
+
+Activity.destroy_all
