@@ -4,11 +4,13 @@
 
 
 
-<% if current_user.role == "administrator" %>
+<!--
+ <% if current_user.role == "administrator" %>
   <%= render 'index_admin' %>
 <% else %>
   <%= render 'index_user' %>
-<% end %>
+<% end %> 
+-->
 
 <br/>
 <%= link_to 'Abrir Nova Monitoria', new_activity_path %>
