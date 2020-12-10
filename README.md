@@ -21,6 +21,9 @@ O NOMEDOAPP é uma aplicação web onde os monitores podem se cadastrar e acessa
 ### Front end
   a) Embedded Ruby
   
+  b) HTML
+  
+  c) CSS
   
 ### Back end
   a) Ruby on Rails
