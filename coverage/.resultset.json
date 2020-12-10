@@ -519,9 +519,9 @@
           1,
           null,
           1,
-          8,
-          6,
-          8,
+          7,
+          5,
+          7,
           null,
           null,
           null
@@ -579,6 +579,12 @@
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
           null,
           null
         ]
@@ -607,13 +613,7 @@
           1,
           null,
           1,
-          3,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
+          2,
           null,
           null,
           1,
@@ -644,6 +644,6 @@
         ]
       }
     },
-    "timestamp": 1607556432
+    "timestamp": 1607563527
   }
 }
