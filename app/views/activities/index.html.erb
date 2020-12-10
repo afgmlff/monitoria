@@ -1,0 +1,16 @@
+<p id="notice"></p>
+
+<h1>Atividades de monitoria</h1>
+
+
+
+<% if current_user.role == "administrator" %>
+  <%= render 'index_admin' %>
+<% else %>
+  <%= render 'index_user' %>
+<% end %>
+
+<br/>
+<%= link_to 'Abrir Nova Monitoria', new_activity_path %>
+<br/>
+<%= link_to 'Página Inicial', root_path %>
