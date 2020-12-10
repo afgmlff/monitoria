@@ -29,9 +29,9 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-
       t.timestamps null: false
       t.string :name
+      t.integer :role, default: -1
     end
 
     add_index :users, :email,                unique: true
