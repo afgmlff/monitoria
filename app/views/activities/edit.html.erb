@@ -5,8 +5,8 @@
         Nome da disciplina: 
     <%= form.collection_select(:subject, Discipline.all, :id, :name) %>
     </p>
-    <p>Data de inicio: <%= form.date_field :start_date %></p>
-    <p>data de termino: <%= form.date_field :end_date %></p>
+    <p>Data de inicio (Ex.: 2020-12-15T00:00:00): <%= form.datetime_field :start_date %></p>
+    <p>Data de termino (Ex.: 2020-12-15T00:00:00): <%= form.datetime_field :end_date %></p>
 	<% if current_user.role == "administrator" %>
 		<p>Descrição: <%= form.text_field :status %></p>
 	<% else %>

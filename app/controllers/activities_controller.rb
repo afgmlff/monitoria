@@ -92,9 +92,6 @@ class ActivitiesController < ApplicationController
       # Se foi possivel apagar o dado, retrona uma mensagem de sucesso
       @activity.destroy!
       flash[:notice] = 'Monitoria apagada com sucesso'
-    rescue StandardError => e
-      # Se não foi possivel apagar, aparece uma mensagem de erro
-      flash[:notice] = e
     ensure
       # É renderizado para Index das monitoria
       redirect_to activities_path

@@ -2,23 +2,37 @@
 
 <h1> Monitoria </h1>
 
-<table>
-  <% @activities.each do |form| %>
+<table style="border: 1px solid black;" >
+  <thead>
     <tr>
-      <% if current_user.role == "aluno" %>
-        <% if form.status == "confirmado" %>
-          <td><%= link_to form.user.name, activity_path(form) %></td>
-          <td><%= Discipline.find(form.subject.to_i).name %></td>
+      <th style="border: 1px solid black;" >Nome do Monitor</th>
+      <th style="border: 1px solid black;" >Disciplina</th>
+      <th style="border: 1px solid black;" >Horário de início</th>
+      <th style="border: 1px solid black;" >Horário de fim</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @activities.each do |form| %>
+      <tr>
+        <% if current_user.role == "aluno" %>
+          <% if form.status == "confirmado" %>
+            <td style="border: 1px solid black;" ><%= link_to form.user.name, activity_path(form) %></td>
+            <td style="border: 1px solid black;" ><%= Discipline.find(form.subject.to_i).name %></td>
+            <td style="border: 1px solid black;" ><%= form.start_date %></td>
+            <td style="border: 1px solid black;" ><%= form.end_date %></td>
+          <% end %>
+        <% else %>
+          <td style="border: 1px solid black;" ><%= link_to form.user.name, activity_path(form) %></td>
+          <td style="border: 1px solid black;" ><%= Discipline.find(form.subject.to_i).name %></td>
+          <td style="border: 1px solid black;" ><%= form.start_date %></td>
+          <td style="border: 1px solid black;" ><%= form.end_date %></td>
+          <% if current_user.role == "tutor" or current_user.role == "administrator" %>
+        	  <td><%= button_to 'Edit', edit_activity_path(form), method: 'get'%></td>
+            <td><%= button_to 'Remove', activity_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+          <% end %>
         <% end %>
-      <% else %>
-        <td><%= link_to form.user.name, activity_path(form) %></td>
-        <td><%= Discipline.find(form.subject.to_i).name %></td>
-        <% if current_user.role == "tutor" or current_user.role == "administrator" %>
-      	  <td><%= button_to 'Edit', edit_activity_path(form), method: 'get'%></td>
-          <td><%= button_to 'Remove', activity_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
-        <% end %>
-      <% end %>
-  <% end %>
+    <% end %>
+  <tbody>
 </table>
 
 <% if current_user.role == "tutor" %>

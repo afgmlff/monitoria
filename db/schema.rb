@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2020_12_11_201344) do
   create_table "activities", force: :cascade do |t|
     t.bigint "user_id"
     t.string "subject"
-    t.date "start_date"
-    t.date "end_date"
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
