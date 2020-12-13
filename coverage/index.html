@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-12-13T17:36:15-03:00">2020-12-13T17:36:15-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-12-13T17:37:22-03:00">2020-12-13T17:37:22-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,7 +23,7 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  97.37%
+  96.91%
 </span>
 
      </span>
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>342</b> relevant lines,
-    <span class="green"><b>333</b> lines covered</span> and
-    <span class="red"><b>9</b> lines missed. </span>
+    <b>356</b> relevant lines,
+    <span class="green"><b>345</b> lines covered</span> and
+    <span class="red"><b>11</b> lines missed. </span>
     (<span class="green">
-  97.37%
+  96.91%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#a78e95d06db21e769c123439a71182dec8bd3bba" class="src_link" title="app/controllers/activities_controller.rb">app/controllers/activities_controller.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">90.00 %</td>
-            <td class="cell--number">72</td>
-            <td class="cell--number">20</td>
-            <td class="cell--number">18</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">0.90</td>
+            <td class="yellow strong cell--number t-file__coverage">88.24 %</td>
+            <td class="cell--number">114</td>
+            <td class="cell--number">34</td>
+            <td class="cell--number">30</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -187,7 +187,7 @@
             <td class="cell--number">9</td>
             <td class="cell--number">9</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.67</td>
+            <td class="cell--number">3.11</td>
             
           </tr>
         
@@ -510,7 +510,7 @@
     <h3>app/controllers/activities_controller.rb</h3>
     <h4>
       <span class="yellow">
-  90.0%
+  88.24%
 </span>
 
       lines covered
@@ -519,9 +519,9 @@
     
 
     <div class="t-line-summary">
-      <b>20</b> relevant lines.
-      <span class="green"><b>18</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>34</b> relevant lines.
+      <span class="green"><b>30</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
 
     
@@ -1214,29 +1214,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="63">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  private</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="64">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="never" data-hits="" data-linenumber="63">
             
             
 
@@ -1247,24 +1225,46 @@
         </div>
       
         <div>
+          <li class="never" data-hits="" data-linenumber="64">
+            
+            
+
+            
+
+            <code class="ruby">  # Método responsável por atualizar um registro com os dados inseridos em Edit.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby">  # Recebe os dados da view Edit e faz o tratamento dos dados modificados pelo usuário.</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="never" data-hits="" data-linenumber="66">
             
             
 
             
 
-            <code class="ruby">  # Parametros utilizados para criar ou editar as monitorias</code>
+            <code class="ruby">  # Caso os dados sejam válidos, o registro é atualizado no banco, caso não sejam, não salva</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="67">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="67">
+            
             
 
             
 
-            <code class="ruby">  def activitie_params</code>
+            <code class="ruby">  # Redireciona para a página Index</code>
           </li>
         </div>
       
@@ -1275,7 +1275,7 @@
 
             
 
-            <code class="ruby">    # Requer um nome para tabela</code>
+            <code class="ruby">  # PATCH/PUT /activities/:id</code>
           </li>
         </div>
       
@@ -1286,7 +1286,7 @@
 
             
 
-            <code class="ruby">    params.require(:activity).permit(:user_id, :subject, :start_date, :end_date, :status)</code>
+            <code class="ruby">  def update</code>
           </li>
         </div>
       
@@ -1297,12 +1297,144 @@
 
             
 
+            <code class="ruby">    # Encontra a monitoria com o id passado como parâmetro</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="71">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @activity = Activity.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="72">
+            
+            
+
+            
+
+            <code class="ruby">    # Se os dados passados atendem os requisitos estipulados na Model</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="73">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    if @activity.update(activitie_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="74">
+            
+            
+
+            
+
+            <code class="ruby">      # É renderizado para Index da monitoria com uma mensagem de sucesso</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="75">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      flash[:notice] = &#39;Monitoria atualizada com sucesso&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="76">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      redirect_to activities_path</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="77">
+            
+            
+
+            
+
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="78">
+            
+            
+
+            
+
+            <code class="ruby">      # Se não foi possivel fazer update, é renderizado para Index da monitoria com uma mensagem de erro</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="79">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      flash[:notice] = &#39;Não foi possivel editar&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="80">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      redirect_to activities_path</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="81">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="82">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="71">
+          <li class="never" data-hits="" data-linenumber="83">
             
             
 
@@ -1313,7 +1445,337 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="72">
+          <li class="never" data-hits="" data-linenumber="84">
+            
+            
+
+            
+
+            <code class="ruby">  ##</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="85">
+            
+            
+
+            
+
+            <code class="ruby">  # Método responsável por excluir um registro salvo na tabela.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="86">
+            
+            
+
+            
+
+            <code class="ruby">  # Redireciona para a view index.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="87">
+            
+            
+
+            
+
+            <code class="ruby">  # DELETE /activities/:id</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="88">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def destroy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="89">
+            
+            
+
+            
+
+            <code class="ruby">    # Encontra a monitoria com o id passado como parâmetro</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="90">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @activity = Activity.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="91">
+            
+            
+
+            
+
+            <code class="ruby">    begin</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="92">
+            
+            
+
+            
+
+            <code class="ruby">      # Se foi possivel apagar o dado, retrona uma mensagem de sucesso</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="93">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      @activity.destroy!</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="94">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      flash[:notice] = &#39;Monitoria apagada com sucesso&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="95">
+            
+            
+
+            
+
+            <code class="ruby">    rescue StandardError =&gt; e</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="96">
+            
+            
+
+            
+
+            <code class="ruby">      # Se não foi possivel apagar, aparece uma mensagem de erro</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="97">
+            
+            
+
+            
+
+            <code class="ruby">      flash[:notice] = e</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="98">
+            
+            
+
+            
+
+            <code class="ruby">    ensure</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="99">
+            
+            
+
+            
+
+            <code class="ruby">      # É renderizado para Index das monitoria</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="100">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      redirect_to activities_path</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="101">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="102">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="103">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="104">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="105">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="106">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="107">
+            
+            
+
+            
+
+            <code class="ruby">  ##</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="108">
+            
+            
+
+            
+
+            <code class="ruby">  # Parametros utilizados para criar ou editar as monitorias</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="109">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def activitie_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="110">
+            
+            
+
+            
+
+            <code class="ruby">    # Requer um nome para tabela</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="111">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    params.require(:activity).permit(:user_id, :subject, :start_date, :end_date, :status)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="112">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="113">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="114">
             
             
 
@@ -4296,8 +4758,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="18">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="11" data-linenumber="18">
+            <span class="hits">11</span>
             
 
             
@@ -4340,8 +4802,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="8" data-linenumber="22">
-            <span class="hits">8</span>
+          <li class="covered" data-hits="10" data-linenumber="22">
+            <span class="hits">10</span>
             
 
             
