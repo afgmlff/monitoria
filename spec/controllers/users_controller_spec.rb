@@ -27,5 +27,12 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  
+  describe 'GET #show' do
+    it 'assigns the requested user as @user' do
+      user = User.create! valid_attributes
+      get :show, params: { id: user.to_param }, session: valid_session
+      expect(assigns(:user)).to eq(user)
+    end
+  end
+
 end
