@@ -1,0 +1,6 @@
+<h3>Editar disciplina (<%= @discipline.name %>)</h3>
+<%= form_for @discipline do |form| %>
+    <p>Novo nome: <%= form.text_field :name %></p>
+
+    <%= form.submit "Editar" %>
+<% end %>

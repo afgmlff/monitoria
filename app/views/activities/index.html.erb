@@ -1,16 +1,26 @@
-<p id="notice"></p>
+<p id="notice"><%= flash[:notice] %></p>
 
-<h1>Atividades de monitoria</h1>
+<h1> Monitoria </h1>
 
+<table>
+  <% @activities.each do |form| %>
+    <tr>
+      <% if current_user.role == "aluno" %>
+        <% if form.status == "confirmado" %>
+          <td><%= link_to form.user.name, activity_path(form) %></td>
+          <td><%= Discipline.find(form.subject.to_i).name %></td>
+        <% end %>
+      <% else %>
+        <td><%= link_to form.user.name, activity_path(form) %></td>
+        <td><%= Discipline.find(form.subject.to_i).name %></td>
+        <% if current_user.role == "tutor" or current_user.role == "administrator" %>
+      	  <td><%= button_to 'Edit', edit_activity_path(form), method: 'get'%></td>
+          <td><%= button_to 'Remove', activity_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+        <% end %>
+      <% end %>
+  <% end %>
+</table>
 
-
-<% if current_user.role == "administrator" %>
-  <%= render 'index_admin' %>
-<% else %>
-  <%= render 'index_user' %>
+<% if current_user.role == "tutor" %>
+  <%= link_to "Agendar nova monitoria", new_activity_path %>
 <% end %>
-
-<br/>
-<%= link_to 'Abrir Nova Monitoria', new_activity_path %>
-<br/>
-<%= link_to 'Página Inicial', root_path %>

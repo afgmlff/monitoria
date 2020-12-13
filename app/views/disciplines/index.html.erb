@@ -1,0 +1,18 @@
+<p id="notice"><%= flash[:notice] %></p>
+
+<h1> Diciplinas </h1>
+
+<table>
+  <% @disciplines.each do |form| %>
+    <tr>
+      <td><%= form.name %></td>
+      <% if current_user.role == "administrator" %>
+        <td><%= button_to 'Edit', edit_discipline_path(form), method: 'get'%></td>
+        <td><%= button_to 'Remove', discipline_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+  	  <% end %>
+  <% end %>
+</table>
+
+<% if current_user.role == "administrator" %>
+  <%= link_to "Criar nova disciplina", new_discipline_path %>
+<% end %>

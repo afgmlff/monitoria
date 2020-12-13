@@ -1,0 +1,10 @@
+<h2> Monitoria em destaque</h2>
+
+<h4>Monitor: <%= @activity.user.name %></h4>
+<h4>Disciplina: <%= Discipline.find(@activity.subject.to_i).name %></h4>
+<h4>Data de inicio: <%= @activity.start_date %></h4>
+<h4>Data de termino: <%= @activity.end_date %></h4>
+<h4>Descrição: <%= @activity.status %></h4>
+
+<%= button_to "Ver todas as monitorias", activities_path, method: :get %>
+

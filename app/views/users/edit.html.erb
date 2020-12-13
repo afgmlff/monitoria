@@ -1,0 +1,10 @@
+<h3>Editar usuário</h3>
+<%= form_for @user do |form| %>
+
+    <p>
+        Nome do Usuário: 
+    <%= @user.name %>
+    </p>
+	<p>Role: <%= form.text_field :role %></p>
+    <%= form.submit "Salvar" %>
+<% end %>

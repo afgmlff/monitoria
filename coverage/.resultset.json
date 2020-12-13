@@ -4,6 +4,8 @@
       "/home/afgm/Desktop/ProjetoMP/monitoria/config/environment.rb": {
         "lines": [
           null,
+          null,
+          null,
           1,
           null,
           null,
@@ -12,6 +14,8 @@
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/config/application.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -45,6 +49,8 @@
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/config/boot.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -53,6 +59,8 @@
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/config/environments/test.rb": {
         "lines": [
+          null,
+          null,
           null,
           null,
           null,
@@ -113,11 +121,14 @@
           null,
           null,
           null,
+          null,
           null
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/config/initializers/assets.rb": {
         "lines": [
+          null,
+          null,
           null,
           null,
           null,
@@ -136,6 +147,7 @@
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/config/initializers/backtrace_silencers.rb": {
         "lines": [
+          null,
           null,
           null,
           null,
@@ -176,6 +188,7 @@
           null,
           null,
           null,
+          null,
           null
         ]
       },
@@ -185,11 +198,15 @@
           null,
           null,
           null,
+          null,
+          null,
           1
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/config/initializers/devise.rb": {
         "lines": [
+          null,
+          null,
           null,
           null,
           1,
@@ -465,11 +482,14 @@
           null,
           null,
           null,
+          null,
+          null,
           1
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/config/initializers/inflections.rb": {
         "lines": [
+          null,
           null,
           null,
           null,
@@ -493,6 +513,7 @@
           null,
           null,
           null,
+          null,
           null
         ]
       },
@@ -504,6 +525,8 @@
           null,
           null,
           null,
+          null,
+          null,
           1,
           2,
           null,
@@ -514,17 +537,46 @@
           null
         ]
       },
+      "/home/afgm/Desktop/ProjetoMP/monitoria/spec/factories/activities.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/afgm/Desktop/ProjetoMP/monitoria/spec/factories/disciplines.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/afgm/Desktop/ProjetoMP/monitoria/spec/factories/users.rb": {
         "lines": [
+          null,
+          null,
           1,
-          null,
-          1,
-          7,
-          7,
-          5,
-          7,
-          null,
-          null,
           1,
           1,
           1,
@@ -538,37 +590,78 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/config/routes.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
           1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/models/user.rb": {
         "lines": [
-          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           1,
           null,
-          null,
-          1,
           1,
           null,
-          1,
           null,
+          null,
+          null,
+          1,
           null
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/models/application_record.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null
@@ -576,30 +669,57 @@
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/helpers/activities_helper.rb": {
         "lines": [
+          null,
+          null,
           1,
           null
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/helpers/application_helper.rb": {
         "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/afgm/Desktop/ProjetoMP/monitoria/app/helpers/disciplines_helper.rb": {
+        "lines": [
+          null,
+          null,
           1,
           null
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/helpers/home_helper.rb": {
         "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/afgm/Desktop/ProjetoMP/monitoria/app/helpers/users_helper.rb": {
+        "lines": [
+          null,
+          null,
           1,
           null
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/controllers/activities_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
+          null,
           null
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/controllers/application_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -611,9 +731,45 @@
           null
         ]
       },
+      "/home/afgm/Desktop/ProjetoMP/monitoria/spec/controllers/disciplines_controller_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/afgm/Desktop/ProjetoMP/monitoria/app/controllers/disciplines_controller.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/afgm/Desktop/ProjetoMP/monitoria/spec/controllers/home_controller_spec.rb": {
         "lines": [
-          1,
+          null,
           null,
           1,
           null,
@@ -621,7 +777,7 @@
           1,
           1,
           1,
-          null,
+          1,
           null,
           null,
           null
@@ -629,37 +785,59 @@
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/controllers/home_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
+          null
+        ]
+      },
+      "/home/afgm/Desktop/ProjetoMP/monitoria/spec/controllers/users_controller_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/afgm/Desktop/ProjetoMP/monitoria/app/controllers/users_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
           null
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/spec/models/activity_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
           1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          1,
-          null,
           null,
           1,
           0,
           null,
           null,
           1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
+          0,
           null,
           null,
           null,
@@ -668,59 +846,56 @@
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/app/models/activity.rb": {
         "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
+          null,
+          null
+        ]
+      },
+      "/home/afgm/Desktop/ProjetoMP/monitoria/spec/models/discipline_spec.rb": {
+        "lines": [
+          null,
+          null,
           1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/afgm/Desktop/ProjetoMP/monitoria/app/models/discipline.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
           null
         ]
       },
       "/home/afgm/Desktop/ProjetoMP/monitoria/spec/models/user_spec.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
           null,
           null,
           1,
           null,
           1,
-          2,
-          null,
-          null,
           1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
+          0,
           null,
           null,
           null,
-          1,
-          1,
-          1,
           null,
-          1,
-          1,
-          1,
-          1,
+          null,
           null,
           null,
           null,
@@ -728,6 +903,6 @@
         ]
       }
     },
-    "timestamp": 1607635629
+    "timestamp": 1607886670
   }
 }

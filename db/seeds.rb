@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -8,8 +10,8 @@
 
 # Users
 User.destroy_all
-User.create(name: "Administrador", email: "admin@admin.com", password: "admin123", role: "administrator")
-User.create(name: "Monitor", email: "tutor@tutor.com", password: "admin123", role: "tutor")
-User.create(name: "Aluno", email: "aluno@aluno.com", password: "admin123", role: "aluno")
+User.create(name: 'Administrador', email: 'admin@admin.com', password: 'admin123', role: 'administrator')
+User.create(name: 'Monitor', email: 'tutor@tutor.com', password: 'admin123', role: 'tutor')
+User.create(name: 'Aluno', email: 'aluno@aluno.com', password: 'admin123', role: 'aluno')
 
 Activity.destroy_all

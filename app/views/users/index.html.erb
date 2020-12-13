@@ -1,0 +1,14 @@
+<p id="notice"><%= flash[:notice] %></p>
+
+<h1> Usuários </h1>
+
+<table>
+  <% @users.each do |form| %>
+    <tr>
+      <td><%= form.name %></td>
+      <% if current_user.role == "administrator" %>
+        <td><%= button_to 'Edit', edit_user_path(form), method: 'get'%></td>
+        <td><%= button_to 'Remove', user_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+  	  <% end %>
+  <% end %>
+</table>

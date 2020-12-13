@@ -6,6 +6,10 @@
   <h1>Bem vindo ao Monitorias, usuário "<%=current_user.name if current_user%>"</h1>
   <%= link_to "Sair", destroy_user_session_path, method: :delete %>
   <%= link_to "Monitorias", activities_path %>
+  <%= link_to "Disciplinas", disciplines_path %>
+  <% if current_user.role == "administrator" %>
+      <%= link_to "Usuários", users_path %>
+  <% end %>
 
 <% else %>
   <h3>Entrar</h3>

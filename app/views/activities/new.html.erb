@@ -1,0 +1,14 @@
+<h3>Agendar monitoria</h3>
+<%= form_for @activity do |form| %>
+    <%= form.hidden_field :user_id, :value => current_user.id %>
+    <%= form.hidden_field :status, :value => "Aguardando confirmação" %>
+
+    <p>
+    Nome da disciplina: 
+    <%= form.collection_select(:subject, Discipline.all, :id, :name) %>
+    </p>
+    <p>Data de inicio: <%= form.date_field :start_date %></p>
+    <p>data de termino: <%= form.date_field :end_date %></p>
+
+    <%= form.submit "Criar" %>
+<% end %>
