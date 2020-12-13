@@ -48,6 +48,57 @@ class DisciplinesController < ApplicationController
     end
   end
 
+
+  ##
+  # Ação edit da classe Discipline.
+  # Renderiza página para edição de uma diciplina.
+  # GET /disciplines/:id/edit
+  def edit
+    # Solicita um id para saber qual dado será editado
+    @discipline = Discipline.find(params[:id])
+  end
+
+  ##
+  # Método responsável por atualizar um registro com os dados inseridos em Edit.
+  # Recebe os dados da view Edit e faz o tratamento dos dados modificados pelo usuário.
+  # Caso os dados sejam válidos, o registro é atualizado no banco
+  # Redireciona para a página Index
+  # PATCH/PUT /disciplines/:id
+  def update
+    # Encontra a diciplina com o id passado como parâmetro
+    @discipline = Discipline.find(params[:id])
+    # Se os dados passados atendem os requisitos estipulados na Model
+    if @discipline.update(discipline_params)
+      # É renderizado para Index da disciplina com uma mensagem de sucesso
+      flash[:notice] = "Disciplina #{@discipline.name} atualizada com sucesso"
+      redirect_to disciplines_path
+    else
+      # Se não foi possivel fazer update, é renderizado para Index da disciplina com uma mensagem de erro
+      flash[:notice] = 'Não foi possivel editar'
+      redirect_to disciplines_path
+    end
+  end
+
+  ##
+  # Método responsável por excluir um registro salvo na tabela.
+  # Redireciona para a view index.
+  # DELETE /disciplines/:id
+  def destroy
+    # Encontra a diciplina com o id passado como parâmetro
+    @discipline = Discipline.find(params[:id])
+    begin
+      # Se foi possivel apagar o dado, retrona uma mensagem de sucesso
+      @discipline.destroy!
+      flash[:notice] = "Disciplina #{@discipline.name} apagada com sucesso"
+    rescue StandardError => e
+      # Se não foi possivel apagar, aparece uma mensagem de erro
+      flash[:notice] = e
+    ensure
+      # É renderizado para Index das diciplinas
+      redirect_to disciplines_path
+    end
+  end
+
   private
 
   ##
