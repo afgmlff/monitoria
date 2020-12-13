@@ -22,4 +22,32 @@ RSpec.describe DisciplinesController, type: :controller do
     end
   end
 
+  describe 'GET #new' do
+    it 'returns a success response' do
+      get :new
+      expect(assigns(:discipline)).to be_a_new(Discipline)
+    end
+  end
+
+  describe 'POST #create' do
+    context 'with valid params' do
+      it 'creates a new Discipline' do
+        expect do
+          post :create, params: { discipline: valid_attributes }, session: valid_session
+        end.to change(Discipline, :count).by(1)
+      end
+      it 'assigns a newly created discipline as @discipline' do
+        post :create, params: { discipline: valid_attributes }, session: valid_session
+        expect(assigns(:discipline)).to be_a(Discipline)
+        expect(assigns(:discipline)).to be_persisted
+      end
+    end
+    context 'with invalid params' do
+      it 'assigns a newly created but unsaved discipline as @discipline' do
+        post :create, params: { discipline: invalid_attributes }, session: valid_session
+        expect(assigns(:discipline)).to be_a_new(Discipline)
+      end
+    end
+  end
+  
 end
