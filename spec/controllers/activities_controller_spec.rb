@@ -37,5 +37,22 @@ RSpec.describe ActivitiesController, type: :controller do
     end
   end
 
+  describe 'POST #create' do
+    context 'with valid params' do
+      it 'creates a new Activity' do
+        expect do
+          post :create, params: { activity: valid_attributes }, session: valid_session
+        end.to change(Activity, :count).by(1)
+      end
+    end
+  end
+
+  describe 'GET #edit' do
+    it 'assigns the requested activity as @activity' do
+      activity = Activity.create! valid_attributes
+      get :edit, params: { id: activity.to_param }, session: valid_session
+      expect(assigns(:activity)).to eq(activity)
+    end
+  end
 
 end
