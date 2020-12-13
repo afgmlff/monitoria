@@ -12,5 +12,19 @@ RSpec.describe User, type: :model do
     )
   end
 
+  describe 'validates information' do
+    before(:each) do
+      @user = create(:user)
+    end
+
+    it 'has a valid factory' do
+      expect(@user).to be_valid
+    end
+
+    it 'is valid with a name and email' do
+      expect(@user).to be_valid
+    end
+  end
+
 
 end
