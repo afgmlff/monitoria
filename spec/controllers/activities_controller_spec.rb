@@ -15,5 +15,11 @@ RSpec.describe ActivitiesController, type: :controller do
 
   let(:activities) { create_list :activity, 1 }
 
+  describe 'GET #index' do
+    it 'returns a success response' do
+      get :index
+      expect(assigns(:activities)).to eq activities
+    end
+  end
 
 end
