@@ -34,7 +34,7 @@ RSpec.describe UsersController, type: :controller do
       expect(assigns(:user)).to eq(user)
     end
   end
-  
+
   describe 'GET #edit' do
     it 'assigns the requested user as @user' do
       user = User.create! valid_attributes
@@ -43,4 +43,29 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+
+  describe 'PUT #update' do
+    context 'with valid params' do
+      let(:new_attributes) do
+        { role: 'tutor' }
+      end
+
+      it 'updates the requested user' do
+        user = User.create! valid_attributes
+        put :update, params: { id: user.to_param, user: new_attributes }, session: valid_session
+        user.reload
+        expect(user.role).to eq(new_attributes[:role])
+      end
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    it 'destroys the requested user' do
+      user = User.create! valid_attributes
+      expect do
+        delete :destroy, params: { id: user.to_param }, session: valid_session
+      end.to change(User, :count).by(-1)
+    end
+  end
+  
 end
