@@ -28,4 +28,52 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+
+  ##
+  # Método responsável por atualizar um registro com os dados inseridos em Edit.
+  # Recebe os dados da view Edit e faz o tratamento dos dados modificados pelo usuário.
+  # Caso os dados sejam válidos, o registro é atualizado no banco, caso não sejam, não salva
+  # Redireciona para a página Index
+  # PATCH/PUT /users/:id
+  def update
+    # Encontra o usuario com o id passado como parâmetro
+    @user = User.find(params[:id])
+    # Se os dados passados atendem os requisitos estipulados na Model
+    if @user.update(user_params)
+      # É renderizado para Index do usuario com uma mensagem de sucesso
+      flash[:notice] = 'Usuario atualizada com sucesso'
+      redirect_to users_path
+    else
+      # Se não foi possivel fazer update, é renderizado para Index do usuario com uma mensagem de erro
+      flash[:notice] = 'Não foi possivel editar'
+      redirect_to users_path
+    end
+  end
+
+  ##
+  # Método responsável por excluir um registro salvo na tabela.
+  # Redireciona para a view index.
+  # DELETE /users/:id
+  def destroy
+    # Encontra o usuario com o id passado como parâmetro
+    @user = User.find(params[:id])
+    begin
+      # Se foi possivel apagar o dado, retrona uma mensagem de sucesso
+      @user.destroy!
+      flash[:notice] = 'Usuário apagado com sucesso'
+    ensure
+      # É renderizado para Index dos usuários
+      redirect_to users_path
+    end
+  end
+
+  private
+
+  ##
+  # Parametros utilizados para criar ou editar os usuarios
+  def user_params
+    # Requer um nome para tabela
+    params.require(:user).permit(:role)
+  end
+
 end
