@@ -13,5 +13,21 @@ RSpec.describe Activity, type: :model do
     { status: 'Espera' }
   end
 
+  describe 'checks a creation' do
+    context 'when a valid record' do
+      it 'has valid attributes' do
+        expect(
+          Activity.new(valid_params)
+        ).to be_valid
+      end
+    end
 
+    context 'when a invalid record' do
+      it 'has invalid attributes' do
+        expect(
+          Activity.new(invalid_params)
+        ).to_not be_valid
+      end
+    end
+  end
 end
