@@ -8,7 +8,7 @@
     <p>Data de inicio (Ex.: 2020-12-15T00:00:00): <%= form.datetime_field :start_date %></p>
     <p>Data de termino (Ex.: 2020-12-15T00:00:00): <%= form.datetime_field :end_date %></p>
 	<% if current_user.role == "administrator" %>
-		<p>Descrição: <%= form.text_field :status %></p>
+		<p>Descrição ("Aguardando confirmação" ou "confirmado"): <%= form.text_field :status %></p>
 	<% else %>
     	<%= form.hidden_field :status, :value => "Aguardando confirmação" %>
     <% end %>

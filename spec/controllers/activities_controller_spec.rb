@@ -86,5 +86,4 @@ RSpec.describe ActivitiesController, type: :controller do
       end.to change(Activity, :count).by(-1)
     end
   end
-
 end

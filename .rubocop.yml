@@ -1,0 +1,42 @@
+# gem rubocop-rails
+require:
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.6.3
+  Exclude:
+    - './Rakefile'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'lib/tasks/cucumber.rake'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'spec/rails_helper.rb'
+
+
+Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 15
+
+# Escrevemos mais linhas em arquivos de teste do que em arquivos de
+# código, então é importante poder ter esses arquivos do tamanho necessário
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context', 'feature', 'scenario', 'let']
+
+# Padrão do Rubocop
+Metrics/LineLength:
+  Max: 120
+
+Metrics/ClassLength:
+  Max: 250
+
+Metrics/ModuleLength:
+  Max: 120
+
+# Desabilita o Rubocop para comentários, visto que os comentários muitas das
+# vezes contem caracteres não ascii
+AsciiComments:
+  Enabled: false

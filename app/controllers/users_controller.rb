@@ -28,7 +28,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-
   ##
   # Método responsável por atualizar um registro com os dados inseridos em Edit.
   # Recebe os dados da view Edit e faz o tratamento dos dados modificados pelo usuário.
@@ -39,15 +38,15 @@ class UsersController < ApplicationController
     # Encontra o usuario com o id passado como parâmetro
     @user = User.find(params[:id])
     # Se os dados passados atendem os requisitos estipulados na Model
-    if @user.update(user_params)
+    begin
+      @user.update(user_params)
       # É renderizado para Index do usuario com uma mensagem de sucesso
       flash[:notice] = 'Usuario atualizada com sucesso'
-      redirect_to users_path
-    else
+    rescue StandardError => e
       # Se não foi possivel fazer update, é renderizado para Index do usuario com uma mensagem de erro
-      flash[:notice] = 'Não foi possivel editar'
-      redirect_to users_path
+      flash[:notice] = e
     end
+    redirect_to users_path
   end
 
   ##
@@ -75,5 +74,4 @@ class UsersController < ApplicationController
     # Requer um nome para tabela
     params.require(:user).permit(:role)
   end
-
 end

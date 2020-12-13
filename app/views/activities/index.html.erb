@@ -9,6 +9,7 @@
       <th style="border: 1px solid black;" >Disciplina</th>
       <th style="border: 1px solid black;" >Horário de início</th>
       <th style="border: 1px solid black;" >Horário de fim</th>
+      <th style="border: 1px solid black;" >Status</th>
     </tr>
   </thead>
   <tbody>
@@ -20,19 +21,21 @@
             <td style="border: 1px solid black;" ><%= Discipline.find(form.subject.to_i).name %></td>
             <td style="border: 1px solid black;" ><%= form.start_date %></td>
             <td style="border: 1px solid black;" ><%= form.end_date %></td>
+            <td style="border: 1px solid black;" ><%= form.status %></td>
           <% end %>
         <% else %>
           <td style="border: 1px solid black;" ><%= link_to form.user.name, activity_path(form) %></td>
           <td style="border: 1px solid black;" ><%= Discipline.find(form.subject.to_i).name %></td>
           <td style="border: 1px solid black;" ><%= form.start_date %></td>
           <td style="border: 1px solid black;" ><%= form.end_date %></td>
+          <td style="border: 1px solid black;" ><%= form.status %></td>
           <% if current_user.role == "tutor" or current_user.role == "administrator" %>
         	  <td><%= button_to 'Edit', edit_activity_path(form), method: 'get'%></td>
             <td><%= button_to 'Remove', activity_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
           <% end %>
         <% end %>
     <% end %>
-  <tbody>
+  </tbody>
 </table>
 
 <% if current_user.role == "tutor" %>

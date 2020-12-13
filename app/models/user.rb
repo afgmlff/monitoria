@@ -15,5 +15,5 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :name, presence: true
 
-  enum role: %i[administrator tutor aluno]
+  enum role: { administrator: 0, tutor: 1, aluno: 2 }
 end

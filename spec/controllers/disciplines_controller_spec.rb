@@ -50,7 +50,6 @@ RSpec.describe DisciplinesController, type: :controller do
     end
   end
 
-
   describe 'GET #edit' do
     it 'assigns the requested discipline as @discipline' do
       discipline = Discipline.create! valid_attributes
@@ -90,5 +89,4 @@ RSpec.describe DisciplinesController, type: :controller do
       end.to change(Discipline, :count).by(-1)
     end
   end
-  
 end

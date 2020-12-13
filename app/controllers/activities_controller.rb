@@ -28,7 +28,6 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new
   end
 
-
   ##
   # Método responsável por criar um registro com os dados inseridos pelo método New.
   # Recebe os dados da view new e faz o tratamento para decidir se o registro é válido ou não.
@@ -73,12 +72,11 @@ class ActivitiesController < ApplicationController
     if @activity.update(activitie_params)
       # É renderizado para Index da monitoria com uma mensagem de sucesso
       flash[:notice] = 'Monitoria atualizada com sucesso'
-      redirect_to activities_path
     else
       # Se não foi possivel fazer update, é renderizado para Index da monitoria com uma mensagem de erro
       flash[:notice] = 'Não foi possivel editar'
-      redirect_to activities_path
     end
+    redirect_to activities_path
   end
 
   ##
@@ -98,7 +96,6 @@ class ActivitiesController < ApplicationController
     end
   end
 
-
   private
 
   ##
@@ -107,5 +104,4 @@ class ActivitiesController < ApplicationController
     # Requer um nome para tabela
     params.require(:activity).permit(:user_id, :subject, :start_date, :end_date, :status)
   end
-
 end

@@ -2,15 +2,24 @@
 
 <h1> Diciplinas </h1>
 
-<table>
-  <% @disciplines.each do |form| %>
+<table style="border: 1px solid black;" >
+  <thead>
     <tr>
-      <td><%= form.name %></td>
-      <% if current_user.role == "administrator" %>
-        <td><%= button_to 'Edit', edit_discipline_path(form), method: 'get'%></td>
-        <td><%= button_to 'Remove', discipline_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
-  	  <% end %>
-  <% end %>
+      <th style="border: 1px solid black;" >Disciplina</th>
+      <th style="border: 1px solid black;" >Código</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @disciplines.each do |form| %>
+      <tr>
+        <td style="border: 1px solid black;" ><%= form.name %></td>
+        <td style="border: 1px solid black;" ><%= form.id %></td>
+        <% if current_user.role == "administrator" %>
+          <td><%= button_to 'Edit', edit_discipline_path(form), method: 'get'%></td>
+          <td><%= button_to 'Remove', discipline_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+  	    <% end %>
+    <% end %>
+  </tbody>
 </table>
 
 <% if current_user.role == "administrator" %>

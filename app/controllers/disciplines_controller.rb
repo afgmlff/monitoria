@@ -48,7 +48,6 @@ class DisciplinesController < ApplicationController
     end
   end
 
-
   ##
   # Ação edit da classe Discipline.
   # Renderiza página para edição de uma diciplina.
@@ -71,12 +70,11 @@ class DisciplinesController < ApplicationController
     if @discipline.update(discipline_params)
       # É renderizado para Index da disciplina com uma mensagem de sucesso
       flash[:notice] = "Disciplina #{@discipline.name} atualizada com sucesso"
-      redirect_to disciplines_path
     else
       # Se não foi possivel fazer update, é renderizado para Index da disciplina com uma mensagem de erro
       flash[:notice] = 'Não foi possivel editar'
-      redirect_to disciplines_path
     end
+    redirect_to disciplines_path
   end
 
   ##
@@ -107,5 +105,4 @@ class DisciplinesController < ApplicationController
     # Requer um nome para tabela
     params.require(:discipline).permit(:name)
   end
-
 end

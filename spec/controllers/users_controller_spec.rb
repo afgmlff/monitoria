@@ -43,7 +43,6 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-
   describe 'PUT #update' do
     context 'with valid params' do
       let(:new_attributes) do
@@ -67,5 +66,4 @@ RSpec.describe UsersController, type: :controller do
       end.to change(User, :count).by(-1)
     end
   end
-  
 end
