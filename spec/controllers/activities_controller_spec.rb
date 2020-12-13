@@ -55,4 +55,36 @@ RSpec.describe ActivitiesController, type: :controller do
     end
   end
 
+  describe 'PUT #update' do
+    context 'with valid params' do
+      let(:new_attributes) do
+        { subject: 'test 2.0' }
+      end
+
+      it 'updates the requested activity' do
+        activity = Activity.create! valid_attributes
+        put :update, params: { id: activity.to_param, activity: new_attributes }, session: valid_session
+        activity.reload
+        expect(activity.subject).to eq(new_attributes[:subject])
+      end
+    end
+
+    context 'with invalid params' do
+      it 'assigns the activity as @activity' do
+        activity = Activity.create! valid_attributes
+        put :update, params: { id: activity.to_param, activity: invalid_attributes }, session: valid_session
+        expect(assigns(:activity)).to eq(activity)
+      end
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    it 'destroys the requested activity' do
+      activity = Activity.create! valid_attributes
+      expect do
+        delete :destroy, params: { id: activity.to_param }, session: valid_session
+      end.to change(Activity, :count).by(-1)
+    end
+  end
+
 end
