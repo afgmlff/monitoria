@@ -22,4 +22,20 @@ RSpec.describe ActivitiesController, type: :controller do
     end
   end
 
+  describe 'GET #new' do
+    it 'returns a success response' do
+      get :new
+      expect(assigns(:activity)).to be_a_new(Activity)
+    end
+  end
+
+  describe 'GET #show' do
+    it 'assigns the requested activity as @activity' do
+      activity = Activity.create! valid_attributes
+      get :show, params: { id: activity.to_param }, session: valid_session
+      expect(assigns(:activity)).to eq(activity)
+    end
+  end
+
+
 end
