@@ -19,4 +19,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  ##
+  # Ação edit da classe User.
+  # Renderiza página para edição de um usuario.
+  # GET /users/:id/edit
+  def edit
+    # Solicita um id para saber qual dado será editado
+    @user = User.find(params[:id])
+  end
+
 end
