@@ -15,5 +15,17 @@ RSpec.describe UsersController, type: :controller do
 
   let(:users) { create_list :user, 1 }
 
+  describe 'GET #index' do
+    before do
+      @users = [FactoryGirl.build_stubbed(:user)]
+      allow(User).to receive(:all).and_return(@users)
+      get :index
+    end
 
+    it 'returns a success response' do
+      expect(assigns(:users)).to match_array(@users)
+    end
+  end
+
+  
 end
