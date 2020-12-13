@@ -26,5 +26,32 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe 'information must exist' do
+    before(:each) do
+      @user = create(:user)
+    end
 
+    it 'is invalid without an email address' do
+      @user.email = nil
+      @user.valid?
+      expect(@user.errors[:email]).to include("can't be blank")
+    end
+
+    it 'is invalid without a password' do
+      @user.password = ''
+      @user.valid?
+      expect(@user.errors[:password]).to include("can't be blank")
+    end
+  end
+
+  describe 'information cannot already be in use' do
+    before(:each) do
+      @user1 = create(:user, email: 'email@email.com')
+    end
+    it 'is invalid with a duplicate email address' do
+      user2 = build(:user, email: 'email@email.com')
+      user2.valid?
+      expect(user2.errors[:email]).to include('has already been taken')
+    end
+  end
 end
