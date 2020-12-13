@@ -3,10 +3,10 @@
 class UsersController < ApplicationController
   ##
   # Ação index da classe User.
-  # Renderiza a view index, que exibe todas as monitorias criadas
+  # Renderiza a view index, que exibe todos os usuarios criados
   # GET /users
   def index
-    # Lista todas as monitorias
+    # Lista todos os usuarios
     @users = User.all
   end
 
