@@ -9,12 +9,12 @@ Aécio Fernandes Galiza Magalhães | 15/0115121
 Alexander Matheus de Melo Lima | 12/0108534
 Eduardo Marques dos Reis | 19/0012358
 João Victor Novais Magalhães | 18/0033816
-Emanoel | -
+Emanoel Johannes Cardim Lazaro | 170140997
 Mariana Borges de Sampaio | 180046926
 
 ## Descrição do Projeto
 
-O NOMEDOAPP é uma aplicação web onde os monitores podem se cadastrar e acessar cada uma das disciplinas de seu departamento. Como monitor de uma disciplina, ele poderá agenda uma monitoria adicionando informações como link para a reunião, dia, horário e o que será estudado.
+O projeto é uma aplicação web onde os monitores podem se cadastrar e acessar cada uma das disciplinas de seu departamento. Como monitor de uma disciplina, ele poderá agenda uma monitoria adicionando informações como link para a reunião, dia, horário e o que será estudado.
 
 ## Instruções para instalação
 ### Rails
@@ -65,13 +65,16 @@ Onde será exibida a rota em que o servidor estará rodando, bem como a porta de
   b) Postgres
   
 ### Framework de testes
-  Rspec
+  Rspec: https://github.com/rspec/rspec-rails
   
 ### Bibliotecas e Frameworks de teste
-  Rspec
+  Rspec: https://github.com/rspec/rspec-rails
   
-### Verificador de Código
-  Não definido
+### Verificador de Código (estático e padrão de codificação)
+  Rubocop: https://github.com/rubocop-hq/rubocop
+
+### Documentação
+  Rdoc: https://github.com/ruby/rdoc
   
 ### Controle de versão
   Github
