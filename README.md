@@ -53,29 +53,32 @@ Onde será exibida a rota em que o servidor estará rodando, bem como a porta de
 ## Linguagem
 
 ### Front end
-  a) Embedded Ruby
-  
-  b) HTML
-  
-  c) CSS
-  
+a) Embedded Ruby
+
+b) HTML
+
+c) CSS
+
 ### Back end
-  a) Ruby on Rails
-  
-  b) Postgres
+a) Ruby on Rails
+
+b) Postgres
   
 ### Framework de testes
-  Rspec: https://github.com/rspec/rspec-rails
-  
+Rspec: https://github.com/rspec/rspec-rails
+
 ### Bibliotecas e Frameworks de teste
-  Rspec: https://github.com/rspec/rspec-rails
-  
+Rspec: https://github.com/rspec/rspec-rails
+
 ### Verificador de Código (estático e padrão de codificação)
-  Rubocop: https://github.com/rubocop-hq/rubocop
+Rubocop: https://github.com/rubocop-hq/rubocop
 
 ### Documentação
-  Rdoc: https://github.com/ruby/rdoc
-  
+Rdoc: https://github.com/ruby/rdoc
+Para gerar a documentação, basta executar:
+    $ rdoc
+na raiz do repositório, e os arquivos serão gerados na pasta /Doc
+
 ### Controle de versão
   Github
   
