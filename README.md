@@ -76,7 +76,9 @@ Rubocop: https://github.com/rubocop-hq/rubocop
 ### Documentação
 Rdoc: https://github.com/ruby/rdoc
 Para gerar a documentação, basta executar:
+
     $ rdoc
+    
 na raiz do repositório, e os arquivos serão gerados na pasta /Doc
 
 ### Controle de versão
