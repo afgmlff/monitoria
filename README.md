@@ -1,6 +1,8 @@
 # ProjetoMP
 Repositório para o projeto final da disciplina de Métodos de Programação
 
+Link para este repositório: https://github.com/afgmlff/monitoria
+
 ## Integrantes
 
 Nome | Matrícula
@@ -66,9 +68,19 @@ b) Postgres
   
 ### Framework de testes
 Rspec: https://github.com/rspec/rspec-rails
+Para verificar os testes, basta executar:
+
+    $ rspec
+
+na raiz do repositório.
 
 ### Bibliotecas e Frameworks de teste
 Rspec: https://github.com/rspec/rspec-rails
+
+### Cobertura de testes
+simpleCov: https://github.com/simplecov-ruby/simplecov
+
+Ao executar os códigos com o rspec, é gerada uma pasta "coverage" na raiz do repositório, com os arquivos de cobertura.
 
 ### Verificador de Código (estático e padrão de codificação)
 Rubocop: https://github.com/rubocop-hq/rubocop
