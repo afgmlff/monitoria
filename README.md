@@ -91,7 +91,7 @@ Para gerar a documentação, basta executar:
 
     $ rdoc
     
-na raiz do repositório, e os arquivos serão gerados na pasta /Doc
+dentro da pasta "/app" do repositório (referente à aplicação em si), e os arquivos serão gerados na pasta app/Doc
 
 ### Controle de versão
   Github
