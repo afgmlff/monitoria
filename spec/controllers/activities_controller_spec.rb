@@ -3,8 +3,16 @@
 require 'rails_helper'
 
 RSpec.describe ActivitiesController, type: :controller do
+  let(:valid_user_params) do
+    { name: 'Joao', email: 'joao@teste.com', password: 'teste123', role: 'aluno' }
+  end
+
+  before(:each) do
+    @usuario = User.create!(valid_user_params)
+  end
+
   let(:valid_attributes) do
-    { user_id: 1, start_date: '2020-1-1', end_date: '2020-2-2', subject: 'teste' }
+    { user_id: @usuario.id, start_date: '2020-1-1', end_date: '2020-2-2', subject: 'teste' }
   end
 
   let(:invalid_attributes) do

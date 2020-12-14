@@ -1,7 +1,3 @@
-
-<p>Arquivo: app/views/welcome/index.html.erb</p>
-
-
 <% if user_signed_in? %>
   <h1>Bem vindo ao Monitorias, usuário "<%=current_user.name if current_user%>"</h1>
   <%= link_to "Sair", destroy_user_session_path, method: :delete %>
